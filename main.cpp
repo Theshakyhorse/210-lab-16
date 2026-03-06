@@ -1,5 +1,4 @@
 // COMSC-210 | lab 16 | Alexander Sierra
-//this first commit is just a copy of lab 14
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -12,6 +11,10 @@ private:
     int green;
     int blue;
 public:
+//constructors
+    Color() {red=0; green=0; blue=0;}
+    Color(int r, int g, int b) {red=r; green=g; blue=b;}
+    Color(int r) {red=r; green=0; blue=0;}
 //getters and setters
     int getRed() {return red;}
     void setRed(int r) {red = r;}
@@ -30,16 +33,10 @@ public:
 int main() {
     //color 1
     Color first;
-    first.setRed(255);
-    first.setGreen(255);
-    first.setBlue(255);
     first.print();
 
     //color 2
-    Color second;
-    second.setRed(0);
-    second.setGreen(0);
-    second.setBlue(0);
+    Color second(133);
     second.print();
 
     //color 3
